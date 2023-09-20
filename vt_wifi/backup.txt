@@ -1,0 +1,105 @@
+// Event handler for Wi-Fi events
+/*esp_err_t event_handler(void *ctx, system_event_t *event)
+{
+    switch(event->event_id) {
+        case SYSTEM_EVENT_STA_START:
+            printf("Wi-Fi station started\n");
+            esp_wifi_connect();
+            break;
+        case SYSTEM_EVENT_STA_GOT_IP:
+            printf("Got IP address\n");
+            break;
+        case SYSTEM_EVENT_STA_DISCONNECTED:
+            printf("Wi-Fi disconnected\n");
+
+            // Simulate different Wi-Fi error scenarios
+            switch(event->event_info.disconnected.reason) {
+                case WIFI_REASON_AUTH_FAIL:
+                    printf("Authentication failed\n");
+                    // Perform error handling for authentication failure
+                    break;
+                case WIFI_REASON_ASSOC_FAIL:
+                    printf("Association failed\n");
+                    // Perform error handling for association failure
+                    break;
+                case WIFI_REASON_NO_AP_FOUND:
+                    printf("No AP found\n");
+                    // Perform error handling for AP not found
+                    break;
+                default:
+                    printf("Other disconnection reason\n");
+                    // Perform error handling for other disconnection reasons
+                    break;
+            }
+
+            // Reconnect to Wi-Fi after a delay
+            vTaskDelay(1000 / portTICK_PERIOD_MS);
+            esp_wifi_connect();
+            break;
+        default:
+            break;
+    }
+
+    return ESP_OK;
+}*/
+
+/*void app_main()
+{
+    // Initialize Wi-Fi
+    esp_netif_init();
+    //esp_event_loop_init(event_handler, NULL);
+
+    //esp_event_loop_handle_t event_loop_handle;
+    //esp_event_loop_create_default();
+    //esp_event_handler_instance_register(ESP_EVENT_ANY_BASE, ESP_EVENT_ANY_ID, event_handler, NULL, NULL);
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    esp_wifi_init(&cfg);
+    esp_wifi_set_storage(WIFI_STORAGE_RAM);
+    esp_wifi_set_mode(WIFI_MODE_STA);
+
+    // Configure Wi-Fi credentials
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = "VitalThings",
+            .password = "vtSomnofy#18",
+        },
+    };
+    esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config);
+
+    // Start Wi-Fi
+    esp_wifi_start();
+}*/
+
+
+void scann(){
+    wifi_scan_config_t scan_config = {
+        .ssid = 0,
+        .bssid = 0,
+        .channel = 0,
+        .show_hidden = true
+    };
+    printf("Start scanning\n");
+    ESP_ERROR_CHECK(esp_wifi_scan_start(&scan_config,true));
+    printf("Completed! \n");
+
+    uint16_t ap_num;
+    wifi_ap_record_t ap_records[20];
+    esp_wifi_scan_get_ap_num(&ap_num);
+
+    ESP_ERROR_CHECK(esp_wifi_scan_get_ap_records(&ap_num, ap_records));
+
+    printf("Found %d acsess point: \n", ap_num);
+    printf("    SSID    |   CHANNEL |   RSSI    |   MAC \n\n");
+
+    for(int i = 0; i < ap_num; i++){
+        printf("--------------------------------\n");
+        //printf("%30s | %7d | %4d | %02x:%02x:%02x:%02x:%02x:%02x", ap_records[i].ssid, ap_records[i].primary, ap_records[i].rssi, *(ap_records[i].bssid), *(ap_records[i].bssid+1), *(ap_records[i].bssid+2), *(ap_records[i].bssid+3), *(ap_records[i].bssid+4), *(ap_records[i].bssid+5));
+        printf("SSID: %s, BSSID: %02X:%02X:%02X:%02X:%02X:%02X, RSSI: %d dBm, Channel: %d\n",
+               ap_records[i].ssid,
+               ap_records[i].bssid[0], ap_records[i].bssid[1], ap_records[i].bssid[2],
+               ap_records[i].bssid[3], ap_records[i].bssid[4], ap_records[i].bssid[5],
+               ap_records[i].rssi,
+               ap_records[i].primary);
+    }
+}

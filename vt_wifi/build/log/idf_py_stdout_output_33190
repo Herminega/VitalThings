@@ -1,0 +1,120 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader/esp-idf/esptool_py && /Users/herminealfsen/.espressif/python_env/idf5.2_py3.11_env/bin/python /Users/herminealfsen/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader/bootloader.bin
+Bootloader binary size 0x68a0 bytes. 0x760 bytes (7%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+/Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c: In function 'scan_ap':
+/Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c:32:17: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   32 |         .ssid = target_ssid,
+      |                 ^~~~~~~~~~~
+/Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c:41:30: warning: passing argument 1 of 'esp_wifi_scan_get_ap_num' from incompatible pointer type [-Wincompatible-pointer-types]
+   41 |     esp_wifi_scan_get_ap_num(&ap_num);
+      |                              ^~~~~~~
+      |                              |
+      |                              uint8_t * {aka unsigned char *}
+In file included from /Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c:5:
+/Users/herminealfsen/esp-idf/components/esp_wifi/include/esp_wifi.h:446:46: note: expected 'uint16_t *' {aka 'short unsigned int *'} but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  446 | esp_err_t esp_wifi_scan_get_ap_num(uint16_t *number);
+      |                                    ~~~~~~~~~~^~~~~~
+In file included from /Users/herminealfsen/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:11,
+                 from /Users/herminealfsen/esp-idf/components/esp_hw_support/include/esp_cpu.h:20,
+                 from /Users/herminealfsen/esp-idf/components/esp_hw_support/include/spinlock.h:11,
+                 from /Users/herminealfsen/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:74,
+                 from /Users/herminealfsen/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:59,
+                 from /Users/herminealfsen/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:71,
+                 from /Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c:2:
+/Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c:45:50: warning: passing argument 1 of 'esp_wifi_scan_get_ap_records' from incompatible pointer type [-Wincompatible-pointer-types]
+   45 |     ESP_ERROR_CHECK(esp_wifi_scan_get_ap_records(&ap_num, ap_records));
+      |                                                  ^~~~~~~
+      |                                                  |
+      |                                                  uint8_t * {aka unsigned char *}
+/Users/herminealfsen/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/herminealfsen/esp-idf/components/esp_wifi/include/esp_wifi.h:462:50: note: expected 'uint16_t *' {aka 'short unsigned int *'} but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  462 | esp_err_t esp_wifi_scan_get_ap_records(uint16_t *number, wifi_ap_record_t *ap_records);
+      |                                        ~~~~~~~~~~^~~~~~
+/Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c: In function 'wifi_init_sta':
+/Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c:196:26: warning: initialization of 'unsigned char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  196 |             .password = {pass},
+      |                          ^~~~
+/Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c:196:26: note: (near initialization for 'wifi_sta_config.sta.password[0]')
+/Users/herminealfsen/vt_wifi_test/vt_wifi/main/main.c:167:18: warning: unused variable 'netif' [-Wunused-variable]
+  167 |     esp_netif_t* netif = esp_netif_create_default_wifi_sta();
+      |                  ^~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable vt_wifi.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /Users/herminealfsen/vt_wifi_test/vt_wifi/build/vt_wifi.bin
+[9/10] cd /Users/herminealfsen/vt_wifi_test/vt_wifi/build/esp-idf/esptool_py && /Users/herminealfsen/.espressif/python_env/idf5.2_py3.11_env/bin/python /Users/herminealfsen/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/herminealfsen/vt_wifi_test/vt_wifi/build/partition_table/partition-table.bin /Users/herminealfsen/vt_wifi_test/vt_wifi/build/vt_wifi.bin
+vt_wifi.bin binary size 0xba1d0 bytes. Smallest app partition is 0x100000 bytes. 0x45e30 bytes (27%) free.
+[9/10] cd /Users/herminealfsen/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -D IDF_PATH=/Users/herminealfsen/esp-idf -D "SERIAL_TOOL=/Users/herminealfsen/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/Users/herminealfsen/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/herminealfsen/vt_wifi_test/vt_wifi/build -P /Users/herminealfsen/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool esp32 -p /dev/cu.SLAB_USBtoUART -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 vt_wifi.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port /dev/cu.SLAB_USBtoUART
+Connecting....
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 3c:71:bf:cf:0b:b4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000cafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26784 bytes to 16825...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007677... (100 %)
+Wrote 26784 bytes (16825 compressed) at 0x00001000 in 0.9 seconds (effective 246.3 kbit/s)...
+Hash of data verified.
+Compressed 762320 bytes to 493092...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c0e0... (6 %)
+Writing at 0x00024e6b... (9 %)
+Writing at 0x0002a39c... (12 %)
+Writing at 0x0003420d... (16 %)
+Writing at 0x00039fbd... (19 %)
+Writing at 0x0003f9c6... (22 %)
+Writing at 0x000451fe... (25 %)
+Writing at 0x0004ab93... (29 %)
+Writing at 0x0005016a... (32 %)
+Writing at 0x000557d0... (35 %)
+Writing at 0x0005b022... (38 %)
+Writing at 0x00060849... (41 %)
+Writing at 0x0006668c... (45 %)
+Writing at 0x0006bee0... (48 %)
+Writing at 0x00071111... (51 %)
+Writing at 0x00076603... (54 %)
+Writing at 0x0007b835... (58 %)
+Writing at 0x00080f04... (61 %)
+Writing at 0x00086508... (64 %)
+Writing at 0x0008bc0d... (67 %)
+Writing at 0x00091883... (70 %)
+Writing at 0x00096f35... (74 %)
+Writing at 0x0009c943... (77 %)
+Writing at 0x000a272e... (80 %)
+Writing at 0x000a7f41... (83 %)
+Writing at 0x000ad7df... (87 %)
+Writing at 0x000b6c8a... (90 %)
+Writing at 0x000be702... (93 %)
+Writing at 0x000c4212... (96 %)
+Writing at 0x000c96ed... (100 %)
+Wrote 762320 bytes (493092 compressed) at 0x00010000 in 12.7 seconds (effective 481.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 221.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

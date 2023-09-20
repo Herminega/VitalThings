@@ -1,0 +1,51 @@
+[0/1] Re-running CMake...
+-- git describe returned 'fatal: bad revision 'HEAD''
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /Users/herminealfsen/vt_wifi_test/vt_wifi/sdkconfig
+-- Compiler supported targets: xtensa-esp32-elf
+-- App "vt_wifi" version: 1
+-- Adding linker script /Users/herminealfsen/vt_wifi_test/vt_wifi/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /Users/herminealfsen/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /Users/herminealfsen/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /Users/herminealfsen/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /Users/herminealfsen/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /Users/herminealfsen/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /Users/herminealfsen/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /Users/herminealfsen/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /Users/herminealfsen/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /Users/herminealfsen/esp-idf/components/app_trace /Users/herminealfsen/esp-idf/components/app_update /Users/herminealfsen/esp-idf/components/bootloader /Users/herminealfsen/esp-idf/components/bootloader_support /Users/herminealfsen/esp-idf/components/bt /Users/herminealfsen/esp-idf/components/cmock /Users/herminealfsen/esp-idf/components/console /Users/herminealfsen/esp-idf/components/cxx /Users/herminealfsen/esp-idf/components/driver /Users/herminealfsen/esp-idf/components/efuse /Users/herminealfsen/esp-idf/components/esp-tls /Users/herminealfsen/esp-idf/components/esp_adc /Users/herminealfsen/esp-idf/components/esp_app_format /Users/herminealfsen/esp-idf/components/esp_bootloader_format /Users/herminealfsen/esp-idf/components/esp_coex /Users/herminealfsen/esp-idf/components/esp_common /Users/herminealfsen/esp-idf/components/esp_eth /Users/herminealfsen/esp-idf/components/esp_event /Users/herminealfsen/esp-idf/components/esp_gdbstub /Users/herminealfsen/esp-idf/components/esp_hid /Users/herminealfsen/esp-idf/components/esp_http_client /Users/herminealfsen/esp-idf/components/esp_http_server /Users/herminealfsen/esp-idf/components/esp_https_ota /Users/herminealfsen/esp-idf/components/esp_https_server /Users/herminealfsen/esp-idf/components/esp_hw_support /Users/herminealfsen/esp-idf/components/esp_lcd /Users/herminealfsen/esp-idf/components/esp_local_ctrl /Users/herminealfsen/esp-idf/components/esp_mm /Users/herminealfsen/esp-idf/components/esp_netif /Users/herminealfsen/esp-idf/components/esp_netif_stack /Users/herminealfsen/esp-idf/components/esp_partition /Users/herminealfsen/esp-idf/components/esp_phy /Users/herminealfsen/esp-idf/components/esp_pm /Users/herminealfsen/esp-idf/components/esp_psram /Users/herminealfsen/esp-idf/components/esp_ringbuf /Users/herminealfsen/esp-idf/components/esp_rom /Users/herminealfsen/esp-idf/components/esp_system /Users/herminealfsen/esp-idf/components/esp_timer /Users/herminealfsen/esp-idf/components/esp_wifi /Users/herminealfsen/esp-idf/components/espcoredump /Users/herminealfsen/esp-idf/components/esptool_py /Users/herminealfsen/esp-idf/components/fatfs /Users/herminealfsen/esp-idf/components/freertos /Users/herminealfsen/esp-idf/components/hal /Users/herminealfsen/esp-idf/components/heap /Users/herminealfsen/esp-idf/components/http_parser /Users/herminealfsen/esp-idf/components/idf_test /Users/herminealfsen/esp-idf/components/ieee802154 /Users/herminealfsen/esp-idf/components/json /Users/herminealfsen/esp-idf/components/log /Users/herminealfsen/esp-idf/components/lwip /Users/herminealfsen/vt_wifi_test/vt_wifi/main /Users/herminealfsen/esp-idf/components/mbedtls /Users/herminealfsen/esp-idf/components/mqtt /Users/herminealfsen/esp-idf/components/newlib /Users/herminealfsen/esp-idf/components/nvs_flash /Users/herminealfsen/esp-idf/components/nvs_sec_provider /Users/herminealfsen/esp-idf/components/openthread /Users/herminealfsen/esp-idf/components/partition_table /Users/herminealfsen/esp-idf/components/perfmon /Users/herminealfsen/esp-idf/components/protobuf-c /Users/herminealfsen/esp-idf/components/protocomm /Users/herminealfsen/esp-idf/components/pthread /Users/herminealfsen/esp-idf/components/sdmmc /Users/herminealfsen/esp-idf/components/soc /Users/herminealfsen/esp-idf/components/spi_flash /Users/herminealfsen/esp-idf/components/spiffs /Users/herminealfsen/esp-idf/components/tcp_transport /Users/herminealfsen/esp-idf/components/ulp /Users/herminealfsen/esp-idf/components/unity /Users/herminealfsen/esp-idf/components/usb /Users/herminealfsen/esp-idf/components/vfs /Users/herminealfsen/esp-idf/components/wear_levelling /Users/herminealfsen/esp-idf/components/wifi_provisioning /Users/herminealfsen/esp-idf/components/wpa_supplicant /Users/herminealfsen/esp-idf/components/xtensa
+-- Configuring done (2.3s)
+-- Generating done (0.3s)
+-- Build files have been written to: /Users/herminealfsen/vt_wifi_test/vt_wifi/build
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader/esp-idf/esptool_py && /Users/herminealfsen/.espressif/python_env/idf5.2_py3.11_env/bin/python /Users/herminealfsen/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader/bootloader.bin
+Bootloader binary size 0x68a0 bytes. 0x760 bytes (7%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[5/11] Linking C static library esp-idf/esp_app_format/libesp_app_format.a
+[6/11] Generating ld/sections.ld
+[7/11] Building C object CMakeFiles/vt_wifi.elf.dir/project_elf_src_esp32.c.obj
+[8/11] Linking CXX executable vt_wifi.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /Users/herminealfsen/vt_wifi_test/vt_wifi/build/vt_wifi.bin
+[10/11] cd /Users/herminealfsen/vt_wifi_test/vt_wifi/build/esp-idf/esptool_py && /Users/herminealfsen/.espressif/python_env/idf5.2_py3.11_env/bin/python /Users/herminealfsen/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/herminealfsen/vt_wifi_test/vt_wifi/build/partition_table/partition-table.bin /Users/herminealfsen/vt_wifi_test/vt_wifi/build/vt_wifi.bin
+vt_wifi.bin binary size 0xba610 bytes. Smallest app partition is 0x100000 bytes. 0x459f0 bytes (27%) free.
+[10/11] cd /Users/herminealfsen/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -D IDF_PATH=/Users/herminealfsen/esp-idf -D "SERIAL_TOOL=/Users/herminealfsen/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/Users/herminealfsen/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/herminealfsen/vt_wifi_test/vt_wifi/build -P /Users/herminealfsen/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool esp32 -p /dev/cu.SLAB_USBtoUART -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 vt_wifi.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port /dev/cu.SLAB_USBtoUART
+Connecting......
+
+A serial exception error occurred: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+Note: This error originates from pySerial. It is likely not a problem with esptool, but with the hardware connection or drivers.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+FAILED: CMakeFiles/flash /Users/herminealfsen/vt_wifi_test/vt_wifi/build/CMakeFiles/flash 
+cd /Users/herminealfsen/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -D IDF_PATH=/Users/herminealfsen/esp-idf -D "SERIAL_TOOL=/Users/herminealfsen/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/Users/herminealfsen/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/herminealfsen/vt_wifi_test/vt_wifi/build -P /Users/herminealfsen/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

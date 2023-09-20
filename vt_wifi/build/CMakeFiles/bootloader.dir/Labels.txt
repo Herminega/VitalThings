@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/CMakeFiles/bootloader
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/CMakeFiles/bootloader.rule
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/CMakeFiles/bootloader-complete.rule
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/herminealfsen/vt_wifi_test/vt_wifi/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
